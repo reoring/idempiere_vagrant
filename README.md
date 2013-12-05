@@ -11,6 +11,14 @@ Vagrant environment for the iDempiere with chef recipe
 
 # Usage
 
+## start on local
+
 ```
 vagrant up
+```
+
+## start on AWS
+
+```
+vagrant up --provider=aws
 ```
