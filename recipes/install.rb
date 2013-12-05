@@ -32,10 +32,15 @@ postgresql_database_user 'adempiere' do
   action :create
 end
 
-cookbook_file "/home/idempiere/idempiereServer.gtk.linux.x86_64.zip" do
-    source "idempiereServer.gtk.linux.x86_64.zip"
-    owner "root"
-    mode 00777
+# for local file
+#cookbook_file "/home/idempiere/idempiereServer.gtk.linux.x86_64.zip" do
+#    source "idempiereServer.gtk.linux.x86_64.zip"
+#    owner "root"
+#    mode 00777
+#end
+
+remote_file "home/idempiere/idempiereServer.gtk.linux.x86_64.zip" do
+  source "http://sourceforge.net/projects/idempiere/files/v1.0c/server/idempiereServer.gtk.linux.x86_64.zip/download"
 end
 
 execute "unzip idempiere" do
