@@ -22,14 +22,14 @@ connection = {
 }
 
 postgresql_database 'idempiere' do
-  connection connection
-  action :create
+    connection connection
+    action :create
 end
 
 postgresql_database_user 'adempiere' do
-  connection connection
-  password 'adempiere'
-  action :create
+    connection connection
+    password 'adempiere'
+    action :create
 end
 
 # for local file
@@ -40,7 +40,7 @@ end
 #end
 
 remote_file "home/idempiere/idempiereServer.gtk.linux.x86_64.zip" do
-  source "http://sourceforge.net/projects/idempiere/files/v1.0c/server/idempiereServer.gtk.linux.x86_64.zip/download"
+    source "http://sourceforge.net/projects/idempiere/files/v1.0c/server/idempiereServer.gtk.linux.x86_64.zip/download"
 end
 
 execute "unzip idempiere" do
