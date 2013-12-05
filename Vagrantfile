@@ -16,7 +16,6 @@ Vagrant.configure("2") do |config|
     }
 
     aws_config = YAML.load_file("aws_config.yml")
-    p aws_config
 
     aws.access_key_id     = aws_config["aws_access_key"]
     aws.secret_access_key = aws_config["aws_secret_access_key"]
